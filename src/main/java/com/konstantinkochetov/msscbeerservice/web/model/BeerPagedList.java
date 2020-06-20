@@ -11,7 +11,7 @@ import java.io.Serializable;
 import java.util.List;
 
 public class BeerPagedList extends PageImpl<BeerDto> implements Serializable {
-
+    // even we are not caching it is good practice to serialize it and declare serialVersionUID (refer to BeerDto)
     static final long serialVersionUID = 1114715135625836949L;
 
     @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)

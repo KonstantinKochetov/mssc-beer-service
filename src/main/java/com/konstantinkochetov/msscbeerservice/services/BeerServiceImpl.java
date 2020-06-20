@@ -25,6 +25,8 @@ public class BeerServiceImpl implements BeerService {
     private final BeerRepository beerRepository;
     private final BeerMapper beerMapper;
 
+    // beerListCache corresponds to field in ehcache.xml
+    // we set a condition because we don't want to cache inventory cuz it changes frequently, so if user request with inventory then disable it
     @Cacheable(cacheNames = "beerListCache", condition = "#showInventoryOnHand == false ")
     @Override
     public BeerPagedList listBeers(String beerName, BeerStyleEnum beerStyle, PageRequest pageRequest, Boolean showInventoryOnHand) {
@@ -70,6 +72,7 @@ public class BeerServiceImpl implements BeerService {
         return beerPagedList;
     }
 
+    // specifically saying that key for the cache is beerId (in listBeers spring will generate it automatically)
     @Cacheable(cacheNames = "beerCache", key = "#beerId", condition = "#showInventoryOnHand == false ")
     @Override
     public BeerDto getById(UUID beerId, Boolean showInventoryOnHand) {

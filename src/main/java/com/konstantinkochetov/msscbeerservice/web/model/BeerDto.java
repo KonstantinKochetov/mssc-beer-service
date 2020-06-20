@@ -20,8 +20,8 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 public class BeerDto implements Serializable {
-
-    static final long serialVersionUID = -5815566940065181210L;
+    // best practice when declaring Serializable interface (click on lamp icon anc change it)
+    static final long serialVersionUID = -1079858869121075024L;
 
     @Null // we don't want clients to be able to set that property
     private UUID id;
