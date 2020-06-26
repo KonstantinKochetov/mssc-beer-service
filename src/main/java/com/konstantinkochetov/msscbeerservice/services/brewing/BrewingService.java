@@ -2,7 +2,7 @@ package com.konstantinkochetov.msscbeerservice.services.brewing;
 
 import com.konstantinkochetov.msscbeerservice.config.JmsConfig;
 import com.konstantinkochetov.msscbeerservice.domain.Beer;
-import com.konstantinkochetov.msscbeerservice.events.BrewBeerEvent;
+import com.konstantinkochetov.common.events.BrewBeerEvent;
 import com.konstantinkochetov.msscbeerservice.repositories.BeerRepository;
 import com.konstantinkochetov.msscbeerservice.services.inventory.BeerInventoryService;
 import com.konstantinkochetov.msscbeerservice.web.mappers.BeerMapper;
@@ -25,7 +25,6 @@ public class BrewingService {
 
     @Scheduled(fixedRate = 5000) //every 5 seconds
     public void checkForLowInventory() {
-        log.debug("KOK");
         List<Beer> beers = beerRepository.findAll();
 
         beers.forEach(beer -> {
