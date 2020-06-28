@@ -1,7 +1,7 @@
 package com.konstantinkochetov.msscbeerservice.web.mappers;
 
 import com.konstantinkochetov.msscbeerservice.domain.Beer;
-import com.konstantinkochetov.msscbeerservice.web.model.BeerDto;
+import com.konstantinkochetov.brewery.model.BeerDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

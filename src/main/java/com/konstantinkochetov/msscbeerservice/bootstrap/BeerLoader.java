@@ -2,7 +2,7 @@ package com.konstantinkochetov.msscbeerservice.bootstrap;
 
 import com.konstantinkochetov.msscbeerservice.domain.Beer;
 import com.konstantinkochetov.msscbeerservice.repositories.BeerRepository;
-import com.konstantinkochetov.msscbeerservice.web.model.BeerStyleEnum;
+import com.konstantinkochetov.brewery.model.BeerStyleEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

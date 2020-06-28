@@ -1,6 +1,6 @@
-package com.konstantinkochetov.common.events;
+package com.konstantinkochetov.brewery.model.events;
 
-import com.konstantinkochetov.msscbeerservice.web.model.BeerDto;
+import com.konstantinkochetov.brewery.model.BeerDto;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor

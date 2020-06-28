@@ -4,10 +4,10 @@ import com.konstantinkochetov.msscbeerservice.domain.Beer;
 import com.konstantinkochetov.msscbeerservice.repositories.BeerRepository;
 import com.konstantinkochetov.msscbeerservice.web.controller.NotFoundException;
 import com.konstantinkochetov.msscbeerservice.web.mappers.BeerMapper;
-import com.konstantinkochetov.msscbeerservice.web.model.BeerDto;
+import com.konstantinkochetov.brewery.model.BeerDto;
 
-import com.konstantinkochetov.msscbeerservice.web.model.BeerPagedList;
-import com.konstantinkochetov.msscbeerservice.web.model.BeerStyleEnum;
+import com.konstantinkochetov.brewery.model.BeerPagedList;
+import com.konstantinkochetov.brewery.model.BeerStyleEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;

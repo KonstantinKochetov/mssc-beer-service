@@ -1,4 +1,4 @@
-package com.konstantinkochetov.msscbeerservice.web.model;
+package com.konstantinkochetov.brewery.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

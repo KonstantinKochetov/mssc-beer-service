@@ -1,7 +1,7 @@
 package com.konstantinkochetov.msscbeerservice.repositories;
 
 import com.konstantinkochetov.msscbeerservice.domain.Beer;
-import com.konstantinkochetov.msscbeerservice.web.model.BeerStyleEnum;
+import com.konstantinkochetov.brewery.model.BeerStyleEnum;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

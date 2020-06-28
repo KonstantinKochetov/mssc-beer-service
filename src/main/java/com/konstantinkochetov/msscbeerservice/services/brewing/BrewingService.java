@@ -2,7 +2,7 @@ package com.konstantinkochetov.msscbeerservice.services.brewing;
 
 import com.konstantinkochetov.msscbeerservice.config.JmsConfig;
 import com.konstantinkochetov.msscbeerservice.domain.Beer;
-import com.konstantinkochetov.common.events.BrewBeerEvent;
+import com.konstantinkochetov.brewery.model.events.BrewBeerEvent;
 import com.konstantinkochetov.msscbeerservice.repositories.BeerRepository;
 import com.konstantinkochetov.msscbeerservice.services.inventory.BeerInventoryService;
 import com.konstantinkochetov.msscbeerservice.web.mappers.BeerMapper;

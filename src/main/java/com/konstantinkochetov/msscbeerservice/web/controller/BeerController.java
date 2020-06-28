@@ -1,9 +1,9 @@
 package com.konstantinkochetov.msscbeerservice.web.controller;
 
 import com.konstantinkochetov.msscbeerservice.services.BeerService;
-import com.konstantinkochetov.msscbeerservice.web.model.BeerDto;
-import com.konstantinkochetov.msscbeerservice.web.model.BeerPagedList;
-import com.konstantinkochetov.msscbeerservice.web.model.BeerStyleEnum;
+import com.konstantinkochetov.brewery.model.BeerDto;
+import com.konstantinkochetov.brewery.model.BeerPagedList;
+import com.konstantinkochetov.brewery.model.BeerStyleEnum;
 import org.springframework.web.bind.annotation.GetMapping;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
