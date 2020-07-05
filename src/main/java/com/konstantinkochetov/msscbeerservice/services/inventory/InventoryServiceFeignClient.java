@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.UUID;
 
 // works as same as rest template
-@FeignClient(name = "inventory-service") // define a service to call to
+@FeignClient(name = "inventory-service", fallback = InventoryServiceFeignClientFailover.class) // define a service to call to
 public interface InventoryServiceFeignClient {
 
     @RequestMapping(method = RequestMethod.GET, value = BeerInventoryServiceRestTemplateImpl.INVENTORY_PATH) // listBeersById in inventory service
