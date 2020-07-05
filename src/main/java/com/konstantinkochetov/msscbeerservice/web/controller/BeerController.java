@@ -1,17 +1,16 @@
 package com.konstantinkochetov.msscbeerservice.web.controller;
 
-import com.konstantinkochetov.msscbeerservice.services.BeerService;
 import com.konstantinkochetov.brewery.model.BeerDto;
 import com.konstantinkochetov.brewery.model.BeerPagedList;
 import com.konstantinkochetov.brewery.model.BeerStyleEnum;
-import org.springframework.web.bind.annotation.GetMapping;
+import com.konstantinkochetov.msscbeerservice.services.BeerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.UUID;
 
 @RequiredArgsConstructor
@@ -64,12 +63,12 @@ public class BeerController {
     }
 
     @PostMapping(path = "beer")
-    public ResponseEntity saveNewBeer(@RequestBody @Valid BeerDto beerDto) {
+    public ResponseEntity saveNewBeer(@RequestBody @Validated BeerDto beerDto) {
         return new ResponseEntity<>(beerService.saveNewBeer(beerDto), HttpStatus.CREATED);
     }
 
     @PutMapping("beer/{beerId}")
-    public ResponseEntity updateBeerById(@PathVariable("beerId") UUID beerId, @RequestBody @Valid BeerDto beerDto) {
+    public ResponseEntity updateBeerById(@PathVariable("beerId") UUID beerId, @RequestBody @Validated BeerDto beerDto) {
         return new ResponseEntity<>(beerService.updateBeer(beerId, beerDto), HttpStatus.NO_CONTENT);
     }
 }
