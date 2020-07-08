@@ -11,5 +11,5 @@ docker run -d -p 9411:9411 openzipkin/zipkin
 
 3. run all services (start with eureka, config, gateway, and then the rest) 
 
-4. Visualize it: http://localhost:9411/, go to dependencies page, choose a date and search
+4. Visualize it: http://localhost:9411/, go to dependencies page, choose a date and search <br>
 ![Alt Text](zipkin.gif)
