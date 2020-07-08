@@ -1,15 +1,17 @@
 # Spring Boot Microservice
 
-1. run jms docker:
+1. run jms docker: <br>
 docker run -it --rm \
   -p 8161:8161 \
   -p 61616:61616 \
   vromero/activemq-artemis
 
-2. run zipkin docker:
+2. Run zipkin docker: <br>
 docker run -d -p 9411:9411 openzipkin/zipkin
 
-3. run all services (start with eureka, config, gateway, and then the rest) 
+3. Run all services (start with eureka, config, gateway, and then the rest)
 
-4. Visualize it: http://localhost:9411/, go to dependencies page, choose a date and search <br>
+4. Make some requests from a client (like Postman) 
+
+5. Visualize it: http://localhost:9411/, go to dependencies page, choose a date and search <br>
 ![Alt Text](zipkin.gif)
