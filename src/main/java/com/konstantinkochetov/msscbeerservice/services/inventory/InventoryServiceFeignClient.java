@@ -1,5 +1,6 @@
 package com.konstantinkochetov.msscbeerservice.services.inventory;
 
+import com.konstantinkochetov.msscbeerservice.config.FeignClientConfig;
 import com.konstantinkochetov.msscbeerservice.services.model.BeerInventoryDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 // works as same as rest template
-@FeignClient(name = "inventory-service", fallback = InventoryServiceFeignClientFailover.class) // define a service to call to
+@FeignClient(name = "inventory-service", fallback = InventoryServiceFeignClientFailover.class, configuration = FeignClientConfig.class) // define a service to call to
 public interface InventoryServiceFeignClient {
 
     @RequestMapping(method = RequestMethod.GET, value = BeerInventoryServiceRestTemplateImpl.INVENTORY_PATH) // listBeersById in inventory service
