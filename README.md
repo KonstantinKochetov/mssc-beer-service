@@ -1,5 +1,7 @@
 # Spring Boot Microservice
 
+To run locally: <br>
+
 1. run jms docker: <br>
 docker run -it --rm \
   -p 8161:8161 \
@@ -15,3 +17,4 @@ docker run -d -p 9411:9411 openzipkin/zipkin
 
 5. Visualize it: http://localhost:9411/, go to dependencies page, choose a date and search <br>
 ![Alt Text](zipkin.gif)
+
